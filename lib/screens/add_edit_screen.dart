@@ -157,6 +157,10 @@ class _AddEditScreenState extends State<AddEditScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () => Navigator.maybePop(context),
+        ),
         title: Text(isEdit ? 'Tahrirlash' : "Yangi element"),
         actions: [
           if (_isSaving)

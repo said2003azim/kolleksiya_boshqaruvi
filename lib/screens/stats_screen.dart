@@ -4,6 +4,7 @@ import '../providers/collection_provider.dart';
 import '../models/category.dart';
 import '../models/item.dart';
 import '../widgets/stat_card.dart';
+import 'home_screen.dart';
 
 class StatsScreen extends StatelessWidget {
   const StatsScreen({super.key});
@@ -24,6 +25,16 @@ class StatsScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            if (Navigator.canPop(context)) {
+              Navigator.pop(context);
+            } else {
+              TabBackNotification().dispatch(context);
+            }
+          },
+        ),
         title: Row(
           children: [
             Container(

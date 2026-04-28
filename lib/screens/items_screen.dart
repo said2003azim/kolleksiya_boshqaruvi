@@ -5,6 +5,7 @@ import '../models/category.dart';
 import '../widgets/item_card.dart';
 import 'add_edit_screen.dart';
 import '../services/pdf_service.dart';
+import 'home_screen.dart';
 
 class ItemsScreen extends StatefulWidget {
   const ItemsScreen({super.key});
@@ -58,6 +59,16 @@ class _ItemsScreenState extends State<ItemsScreen> {
 
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            if (Navigator.canPop(context)) {
+              Navigator.pop(context);
+            } else {
+              TabBackNotification().dispatch(context);
+            }
+          },
+        ),
         title: _showSearch
             ? TextField(
                 controller: _searchCtrl,
