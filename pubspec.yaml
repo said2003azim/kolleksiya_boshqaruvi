@@ -1,0 +1,51 @@
+name: kolleksiya_boshqaruvi
+description: Hobi kolleksiyangizni boshqaring - kitob, marka, tanga, figura
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Ma'lumotlar bazasi
+  sqflite: ^2.3.0
+  sqflite_common_ffi: ^2.3.3
+  sqflite_common_ffi_web: ^1.1.1
+  path: ^1.8.3
+
+  # Rasm tanlash
+  image_picker: ^1.0.7
+
+  # PDF yaratish
+  pdf: ^3.10.7
+  printing: ^5.12.0
+
+  # Grafiklar
+  fl_chart: ^0.66.0
+
+  # State boshqaruvi
+  provider: ^6.1.2
+
+  # Fayl yo'llari
+  path_provider: ^2.1.2
+
+  # Lokal xotira
+  shared_preferences: ^2.2.2
+
+  # Sana formatlash
+  intl: ^0.19.0
+
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
